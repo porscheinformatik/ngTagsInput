@@ -65,8 +65,8 @@ describe('tiUtil factory', function() {
                 callback2 = jasmine.createSpy();
 
             // Act
-            sut.on('foo', callback1);
             sut.on('foo', callback2);
+            sut.on('foo', callback1);
             sut.trigger('foo', 'some data');
 
             // Assert
